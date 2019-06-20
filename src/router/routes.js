@@ -3,7 +3,7 @@ const routes = [
   {
     path: '/auth',
     component: () => import('layouts/AuthLayout.vue'),
-    meta: { guest: true },
+    // meta: { guest: true },
     children: [
       {
         path: 'login',
@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/',
     component: () => import('layouts/MyLayout.vue'),
-    meta: { requiresAuth: true },
+    // meta: { requiresAuth: true },
     children: [
       { path: '', name: 'dashboard', component: () => import('pages/Index.vue') },
       { path: 'user', component: () => import('pages/user/Index.vue') }
